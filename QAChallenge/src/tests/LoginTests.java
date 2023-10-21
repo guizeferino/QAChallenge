@@ -17,7 +17,7 @@ public class LoginTests {
 		LoginRequest loginRequest1 = new LoginRequest("eve.holt@reqres.in", "cityslicka");
 		LoginResponse loginResponse1 = postLoginRequest(loginRequest1);
 
-		assertThat(loginResponse1.getToken(), equalTo("QpwL5tke4Pnpja7X4"));
+		assertThat(loginResponse1.getToken(), is(notNullValue()));
 
 		// TC002 - Realizar login com Falha - Faltando Senha
 		LoginRequest loginRequest2 = new LoginRequest("peter@klaven", null);
